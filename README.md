@@ -20,4 +20,4 @@ Al correr esta aplicación con node, debe mostrar en la consola `servidor escuch
 
 ## Objetivo
 
-El objetivo es crear una imagen de docker con un archivo `Dockerfile` a partir de este repositorio.
+El objetivo es crear una imagen de docker con un archivo `Dockerfile` a partir de este repositorio, y que docker corra la aplicación correctamente.
