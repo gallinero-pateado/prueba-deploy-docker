@@ -1,0 +1,35 @@
+name: prueba
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: ver archivos
+        run: ls
+
+      - name: correr python
+        run: python ./prueba.py
+        
+      - name: commitear los cambios
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with: 
+          commit_message: Actualizacion de prueba
+          commit_user_name: garaneda [github actions]
+          commit_user_email: garaneda@utem.cl
+          commit_author: yoelpichu
