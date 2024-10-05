@@ -32,4 +32,4 @@ jobs:
           commit_message: Actualizacion de prueba
           commit_user_name: garaneda [github actions]
           commit_user_email: garaneda@utem.cl
-          commit_author: yoelpichu
+          commit_author: garaneda21
