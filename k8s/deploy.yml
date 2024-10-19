@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prueba-api-holaxd
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: prueba-api-holaxd
+  template:
+    metadata:
+      labels:
+        app: prueba-api-holaxd
+    spec:
+      containers:
+      - name: prueba-api-holaxd
+        image: us-central1-docker.pkg.dev/dulcet-analyst-434704-e9/docker-repopo/prueba-api:v1
+        ports:
+        - containerPort: 3000
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "50m"
+          limits:
+            memory: "128Mi"
+            cpu: "100m"
+
